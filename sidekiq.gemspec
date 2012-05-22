@@ -10,13 +10,13 @@ Gem::Specification.new do |gem|
   gem.executables   = ['sidekiq', 'sidekiqctl']
   gem.files         = `git ls-files`.split("\n")
   gem.test_files    = `git ls-files -- test/*`.split("\n")
-  gem.name          = "sidekiq"
+  gem.name          = "kulesa-sidekiq"
   gem.require_paths = ["lib"]
   gem.version       = Sidekiq::VERSION
   gem.add_dependency                  'redis'
   gem.add_dependency                  'redis-namespace'
   gem.add_dependency                  'connection_pool', '~> 0.9.0'
-  gem.add_dependency                  'celluloid', '~> 0.10.0'
+  gem.add_dependency                  'kulesa-celluloid'
   gem.add_dependency                  'multi_json', '~> 1'
   gem.add_development_dependency      'minitest'
   gem.add_development_dependency      'sinatra'
